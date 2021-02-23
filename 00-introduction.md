@@ -1,13 +1,4 @@
-<img src='images/surge_logo.png' width=300 alt='SURGE logo'>
-
-# Discover Coding
-
-## Introduction to Scientific Python
-### Programming and Plotting with the Gapminder data set
-
----
-
-## Introduction
+# Introduction
 
 Welcome to the [SURGE](https://surgeinnovation.ca) Discover Coding Python-Gapminder workshop! This workshop is aimed at people from science disciplines who have no previous experience with a programming language. We teach the basic of coding using Python, a very popular language used in science and data science. If you have programmed before, but are new to Python, you will also find this workshop useful, if perhaps a bit slow at times. 
 
