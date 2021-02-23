@@ -1,4 +1,7 @@
 # Writing Functions
+
+---
+
 ## Questions:
 - How can I create my own functions?
 
@@ -6,7 +9,7 @@
 - Explain and identify the difference between function definition and function call.
 - Write a function that takes a small, fixed number of arguments and produces a single result.
 
-
+---
 
 ## Break programs down into functions to make them easier to understand.
 

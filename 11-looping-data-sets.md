@@ -1,12 +1,16 @@
 # Looping Data Sets
 
+---
+
 ## Questions:
 - How can I process many data sets with a single command?
 
-## Objectives:
+## Learning Objectives:
 - Be able to read and write globbing expressions that match sets of files.
 - Use glob to create lists of files.
 - Write for loops to perform operations on files given their names in a list.
+
+---
 
 ## Use a `for` loop to process files given a list of their names.
 

@@ -6,6 +6,7 @@
 ## Learning Objectives
 - Write programs that assign scalar values to variables and perform calculations with those values.
 - Correctly trace value changes in programs that use scalar assignment.
+
 ---
 
 ## Use variables to store values.

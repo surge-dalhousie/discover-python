@@ -1,9 +1,6 @@
 # Plotting
 
-## Time estimate:
-**Teaching**: 15 min
-
-**Exercises**: 15 min
+---
 
 ## Questions
 - How can I plot my data?
@@ -12,6 +9,8 @@
 ## Objectives
 - Create a time series plot showing a single data set.
 - Create a scatter plot showing relationship between two data sets.
+
+---
 
 ## Matplotlib
 
@@ -55,7 +54,7 @@ plt.plot(time, position)
 
 
     
-![png](12-plotting_files/12-plotting_5_1.png)
+![png](12-plotting_files/12-plotting_6_1.png)
     
 
 
@@ -75,7 +74,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_7_0.png)
+![png](12-plotting_files/12-plotting_8_0.png)
     
 
 
@@ -94,7 +93,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_9_0.png)
+![png](12-plotting_files/12-plotting_10_0.png)
     
 
 
@@ -336,7 +335,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_21_0.png)
+![png](12-plotting_files/12-plotting_22_0.png)
     
 
 
@@ -355,7 +354,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_23_0.png)
+![png](12-plotting_files/12-plotting_24_0.png)
     
 
 
@@ -372,7 +371,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_25_0.png)
+![png](12-plotting_files/12-plotting_26_0.png)
     
 
 
@@ -398,7 +397,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_28_0.png)
+![png](12-plotting_files/12-plotting_29_0.png)
     
 
 
@@ -419,7 +418,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_30_0.png)
+![png](12-plotting_files/12-plotting_31_0.png)
     
 
 
@@ -442,7 +441,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_33_0.png)
+![png](12-plotting_files/12-plotting_34_0.png)
     
 
 
@@ -462,7 +461,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_35_0.png)
+![png](12-plotting_files/12-plotting_36_0.png)
     
 
 
@@ -483,7 +482,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_37_0.png)
+![png](12-plotting_files/12-plotting_38_0.png)
     
 
 
@@ -503,7 +502,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_39_0.png)
+![png](12-plotting_files/12-plotting_40_0.png)
     
 
 
@@ -523,7 +522,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_41_0.png)
+![png](12-plotting_files/12-plotting_42_0.png)
     
 
 
@@ -542,7 +541,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_43_0.png)
+![png](12-plotting_files/12-plotting_44_0.png)
     
 
 
@@ -595,7 +594,7 @@ data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 
 
     
-![png](12-plotting_files/12-plotting_49_1.png)
+![png](12-plotting_files/12-plotting_50_1.png)
     
 
 
@@ -665,7 +664,7 @@ plt.show()
 
 
     
-![png](12-plotting_files/12-plotting_58_0.png)
+![png](12-plotting_files/12-plotting_59_0.png)
     
 
 

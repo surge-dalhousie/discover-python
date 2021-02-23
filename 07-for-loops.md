@@ -1,5 +1,7 @@
 # `for` Loops
 
+---
+
 ## Questions:
 - How can I make a program do many things?
 
@@ -8,9 +10,9 @@
 - Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
 - Write for loops that use the Accumulator pattern to aggregate values.
 
+---
 
-
-## A *for loop* executes commands once for each value in a collection.
+## A `for` loop executes commands once for each value in a collection.
 
 *   Doing calculations on the values in a list one by one
     is as painful as working with `pressure_001`, `pressure_002`, etc.

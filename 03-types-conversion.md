@@ -9,6 +9,7 @@
 - Explain key differences between integers and floating point numbers.
 - Explain key differences between numbers and character strings.
 - Use built-in functions to convert between integers, floating point numbers, and strings.
+
 ---
 
 ## Every value has a type

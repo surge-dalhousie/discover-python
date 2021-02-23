@@ -12,6 +12,7 @@
 - Correctly nest calls to built-in functions
 - Use help to display documentation for built-in functions
 - Correctly describe situations in which SyntaxError and NameError occur
+
 ---
 
 ## Functions in Python
