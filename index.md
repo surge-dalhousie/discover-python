@@ -3,6 +3,3 @@ Welcome to the [SURGE](https://surgeinnovation.ca) [Discover Coding](https://sur
 [Click here to learn more about the Discover Python Workshop](https://surge-dalhousie.github.io/discover-python-gapminder/00-introduction)
 
 [Click here to jump to the Discover Python workshop table of contents](https://surge-dalhousie.github.io/discover-python-gapminder/toc)
-
----
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2018–2021 by SURGE
