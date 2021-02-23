@@ -1,0 +1,13 @@
+SURGE Palette
+
+Pebble White    #e4e2db
+Sand Brown      #a6a094
+Cliff Grey      #4d5869
+
+Lagoon Blue     #43d2c9
+Lake Blue       #2d83a5
+Ocean Blue      #005c84
+
+Leaf Green      #92d660
+Grass Green     #5fb44e
+Forest Green    #008b74
