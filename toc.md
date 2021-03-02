@@ -15,7 +15,7 @@
 12. [Plotting](12-plotting.md)
 13. [Writing Functions](13-writing-functions.md)
 14. [Programming Style](14-programming-style.md)
-15. [Next Steps](15-next-steps.md)
+15. [Next Steps](next-steps.md)
 
 ---
 Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2018–2021 by SURGE
