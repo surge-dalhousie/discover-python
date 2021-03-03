@@ -111,3 +111,6 @@ APIs may look pretty complicated at first, but they can be very helpful in break
 <h2>Pro Tip:</h2>
 When working from examples that you find on the web, resist the temptation to copy and paste them, and instead re-type them yourself. While you may make a few more errors (and it's slower), *it's a much better learning technique*. Although you are, hopefully, reading the code you copy, and trying to understand it, you tend to learn and retain more if you type it out yourself (just like taking notes is more effective than just reading a book or listening to a lecture).
 </font>
+
+---
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by SURGE

@@ -60,7 +60,5 @@ This workshop is adapted by one created by the [Software Carpentry](http://swcar
 
 While we could introduce Python with virtually any data, the Gapminder data are relatively easy to understand without deep technical knowledge of a domain (GDP is a measure of a country's wealth, and the data reflect how this change over time), the data files are open source and so support open sharing and transparency in science, and Dr. Rosling's talks provide a colourful and interesting introduction to the data. We have adapted the Software Carpentry (SC) version of the workshop based on experience teaching it, and finding that some parts of the SC workshop were unclear, or assumed certain background knowledge (particularly mathematics) that was not universally held by our target audience, or that concepts in the SC workshop were presented in a sequence that was not intuitive to us. We have great respect for the SC organization and its aims, and indeed most members of the SURGE Discover Coding teaching team are SC-certified instructors. Adapting and customizing the workshop is in the spirit of the open source movement and open educational resources, which SURGE wholeheartedly supports.
 
-
-```python
-
-```
+---
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by SURGE

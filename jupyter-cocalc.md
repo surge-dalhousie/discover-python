@@ -189,4 +189,4 @@ Note: By default, new cells are code cells. Use the drop-down menu at the top (w
 - Markdown is useful for annotating your code with rich text
 
 ---
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by Aaron J Newman
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by SURGE
