@@ -18,5 +18,3 @@
 1. [Programming Style](programming-style.md)
 1. [Next Steps](next-steps.md)
 
----
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2018–2021 by SURGE
