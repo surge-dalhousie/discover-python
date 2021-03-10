@@ -22,17 +22,23 @@
 
 ## A function may take zero or more **arguments**
 
-*   An **argument** is a value passed into a function, inside parentheses. (We must always use parentheses, even if they're empty, so that Python knows a function is being called.)
-    *   `len()` takes exactly one argument
-    *   `int()`, `str()`, and `float()` take one argument
-    *   `print` takes zero or more
-        *   `print` with no arguments prints a blank line
+An **argument** is a value passed into a function, inside parentheses. 
+*   `len()` takes exactly one argument
+*   `int()`, `str()`, and `float()` take one argument
+*   `print` takes zero or more
+    *   `print` with no arguments prints a blank line
+*   We must always use parentheses when calling a function, even if they're empty, so that Python knows a function is being called
 
 ~~~python
 print('before')
 print()
 print('after')
 ~~~
+
+
+```python
+
+```
 
 ## Every function **returns** something
 
@@ -69,11 +75,11 @@ print(min('a', 'A', '0'))
 
 ## Functions may only work for certain (combinations of) arguments
 
-*   `max()` and `min()` must be given at least two values to compare
-*   They must also be given things that can meaningfully be compared
+`max()` and `min()` must be given at least two values to compare. They must also be given things that can meaningfully be compared.
 
+See what happens when you run each of the following:
 ~~~python
-print(max(999)
+print(max(999))
 print(max(1, 'a'))
 ~~~
 
@@ -84,8 +90,7 @@ print(max(1, 'a'))
 
 ## Functions may have default values for some arguments
 
-*   `round()` will round off a floating-point number
-*   By default, rounds to zero decimal places
+`round()` will round off a floating-point number. By default, it rounds to zero decimal places:
 
 ~~~python
 round(3.712)
@@ -96,7 +101,7 @@ round(3.712)
 
 ```
 
-*   We can specify the number of decimal places we want by passing a second argument
+We can specify the number of decimal places we want by passing a second argument
 
 ~~~python
 round(3.712, 1)
@@ -107,48 +112,46 @@ round(3.712, 1)
 
 ```
 
-## Use the built-in function `help` to get help for a function
+## Errors
 
-*   Every built-in function has online documentation
+You can fix syntax errors by reading the source and runtime errors by tracing execution
+
+### Python reports a syntax error when it can't understand the source of a program
+
+Won't even try to run the program if it can't be parsed
+
+
+
+Look more closely at this error message:
 
 ~~~python
-help(round)
+print("hello world"
 ~~~
 
 
 ```python
-
+print("hello world"
 ```
 
-## The Jupyter Notebook has two ways to get help
 
-*   Option 1: Place the cursor near where the function is invoked in a cell
-    (i.e., the function name or its parameters),
-    * Hold down `shift`, and press `tab`
-    * Do this several times to expand the information returned
-*   Option 2: Type the function name in a cell with a question mark after it. Then run the cell
+      File "<ipython-input-3-fe69f65f3ba9>", line 1
+        print("hello world"
+                           ^
+    SyntaxError: unexpected EOF while parsing
 
-## Python reports a syntax error when it can't understand the source of a program
 
-*   Won't even try to run the program if it can't be parsed
+
+*   The message indicates a problem on first line of the input ("line 1")
+    *   In this case the "ipython-input" section of the file name tells us that we are working with input into IPython, the Python interpreter used by the Jupyter Notebook
+*   The number after `ipython-input-` indicates the cell number that the error occurred in (the number in square brackets to the left of the cell). Note that cells are numbered based on the sequence they are *executed* in, not their order in the notebook. So if you execute the cell above again, this number will change.
+*   Next is the problematic line of code, indicating the start of the problem with a `^` pointer
+*   Finally, the type of error is provided on the last line
+
+Here are some other exampels of syntax errors:
 
 ~~~python
 # Forgot to close the quote marks around the string
 name = 'Feng
-~~~
-
-
-```python
-
-```
-
-### Note: We use comments to add documentation to programs
-
-Anything appearing after a hash symbol `#` in a line of code is ignored by Python
-
-~~~python
-# This sentence isn't executed by Python
-adjustment = 0.5   # Neither is this - anything after '#' is ignored
 ~~~
 
 
@@ -166,24 +169,7 @@ age = = 52
 
 ```
 
-*   Look more closely at the error message:
-
-~~~python
-print("hello world"
-~~~
-
-
-```python
-print("hello world"
-```
-
-*   The message indicates a problem on first line of the input ("line 1")
-    *   In this case the "ipython-input" section of the file name tells us that we are working with input into IPython, the Python interpreter used by the Jupyter Notebook
-*   The number after `ipython-input-` indicates the cell number that the error occurred in (the number in square brackets to the left of the cell). Note that cells are numbered based on the sequence they are *executed* in, not their order in the notebook. So if you execute the cell above again, this number will change.
-*   Next is the problematic line of code, indicating the start of the problem with a `^` pointer
-*   Finally, the type of error is provided on the last line
-
-## Python reports a runtime error when something goes wrong while a program is executing
+### Python reports a runtime error when something goes wrong while a program is executing
 
 ~~~python
 age = 53
@@ -195,7 +181,51 @@ remaining = 100 - aege # mis-spelled 'age'
 
 ```
 
-*   Fix syntax errors by reading the source and runtime errors by tracing execution
+## Getting Help
+
+### Use the built-in function `help` to get help for a function
+
+Every built-in function has online documentation.
+
+~~~python
+help(round)
+~~~
+
+
+```python
+
+```
+
+### The Jupyter Notebook has two ways to get help
+
+**Option 1:** Place the cursor near where the function is invoked in a cell
+    (i.e., the function name or its parameters),
+    * Hold down `shift`, and press `tab`
+    * Do this several times to expand the information returned
+
+**Option 2:** Type the function name in a cell with a question mark after it. Then run the cell
+
+
+```python
+
+```
+
+### Putting *comments* in your own code
+
+Anything appearing after a hash symbol `#` in a line of code is ignored by Python. These are called **comments**. This is a useful way to help yourself and other readers of your code understand what's going on.
+
+~~~python
+# This sentence isn't executed by Python
+adjustment = 0.5   # Neither is this - anything after '#' is ignored
+~~~
+
+
+```python
+
+```
+
+---
+## Exercises
 
 ## What Happens When
 

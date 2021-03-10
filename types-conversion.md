@@ -52,7 +52,7 @@ print(type(fitness))
 
 ## Types control what operations (or methods) can be performed on a given value
 
-*   A value's type determines what the program can do to it. So we can perform subtraction on integers:
+A value's type determines what the program can do to it. So we can perform subtraction on integers:
 
 ~~~python
 print(5 - 3)
@@ -75,7 +75,7 @@ print('hello' - 'h')
 
 ## You *can* use the `+` and `*` operators on strings
 
-*   "Adding" character strings concatenates them; i.e., creates one long string by combinging the inputs in the order you specify
+"Adding" character strings concatenates them; i.e., creates one long string by combinging the inputs in the order you specify
 
 ~~~python
 full_name = 'Ahmed' + 'Walsh'
@@ -87,7 +87,7 @@ print(full_name)
 
 ```
 
-- To add spaces between strings that you concateate, you need to explicitly include whitespaces in quotes:
+To add spaces between strings that you concateate, you need to explicitly include whitespaces in quotes:
 
 ~~~python
 full_name = 'Ahmed' + ' ' + 'Walsh'
@@ -99,7 +99,7 @@ print(full_name)
 
 ```
 
-*   Multiplying a character string by an integer _N_ creates a new string that consists of that character string repeated  _N_ times. (Since multiplication is repeated addition)
+Multiplying a character string by an integer _N_ creates a new string that consists of that character string repeated  _N_ times. (Since multiplication is repeated addition)
 
 ~~~python
 separator = '=' * 10
@@ -114,7 +114,7 @@ print(separator)
 
 ## Strings have a length (but numbers don't)
 
-*   The built-in function `len` counts the number of characters in a string.
+The built-in function `len` counts the number of characters in a string.
 
 ~~~python
 print(len(full_name))
@@ -125,7 +125,7 @@ print(len(full_name))
 
 ```
 
-*   But numbers don't have a length (not even zero).
+But numbers don't have a length (not even zero).
 
 ~~~python
 print(len(52))
@@ -143,7 +143,7 @@ print(len(52))
     ordered. For example, the string `'AB'` is not the same as `'BA'`. Because of
     this ordering, we can treat the string as a list of characters.
 *   Each position in the string (first, second, etc.) is given a number. This
-    number is called an **index** or sometimes a subscript.
+    number is called an **index**.
 *   Indices are numbered from 0.
 *   Use the position's index in square brackets to get the character at that
     position.
@@ -200,8 +200,7 @@ print(len('helium'))
 
 ```
 
-*   Nested functions are evaluated from the inside out,
-     like in mathematics.
+Nested functions such as `print(len())` are evaluated from the inside out, like in mathematics.
 
 ## Slicing numbers?
 
@@ -243,7 +242,7 @@ cell_name = 'neuron'
 3.  What does `cell_name[:5]` (without a value before the colon) do?
 4.  What does `cell_name[:]` (just a colon) do?
 5.  What does `cell_name[1:-1]` do?
-6.  What happens when you choose a `high` value which is out of range? (i.e., try `cell_name[1:15]`) 
+6.  What happens when you choose a high value (.e., the value after the colon) which is out of range? (i.e., try `cell_name[1:99]`) 
 
 
 ```python
@@ -252,7 +251,7 @@ cell_name = 'neuron'
 
 ## You must convert numbers to strings or vice versa when operating on them
 
-*   Cannot add numbers and strings.
+Cannot add numbers and strings.
 
 ~~~python
 print(1 + '2')
@@ -263,8 +262,9 @@ print(1 + '2')
 
 ```
 
-*   Not allowed because it's ambiguous: should `1 + '2'` be `3` or `'12'`?
-*   Some types can be converted to other types by using the type name as a function:
+This is not allowed because it's ambiguous: should `1 + '2'` be `3` or `'12'`?
+
+Some types can be converted to other types by using the type name as a function:
 
 ~~~python
 print(1 + int('2'))
@@ -286,9 +286,7 @@ print(str(1) + '2')
 
 ## You can mix integers and floats freely in operations
 
-*   Integers and floating-point numbers can be mixed in arithmetic.
-    * Python 3 automatically converts integers to floats as needed. 
-    * (Integer division in Python 2 will return an integer, the *floor* of the division.)
+Python 3 automatically converts integers to floats as needed. This was not the case in Python 2, but that is now obsolete. 
 
 ~~~python
 print('half is', 1 / 2.0)
@@ -382,62 +380,6 @@ print('5 / 3:', 5/3)
 
 ~~~python
 print('5 % 3:', 5%3)
-~~~
-
-
-```python
-
-```
-
-However in Python2 (and other languages), the `/` operator between two integer types perform a floor (`//`) division. To perform a float division, we have to convert one of the integers to float.
-
-~~~python
-print('5 // 3:', 1)
-~~~
-
-
-```python
-
-```
-
-~~~python
-print('5 / 3:', 1 )
-~~~
-
-
-```python
-
-```
-
-~~~python
-print('5 / float(3):', 1.6666667 )
-~~~
-
-
-```python
-
-```
-
-~~~python
-print('float(5) / 3:', 1.6666667 )
-~~~
-
-
-```python
-
-```
-
-~~~python
-print('float(5 / 3):', 1.0 )
-~~~
-
-
-```python
-
-```
-
-~~~python
-print('5 % 3:', 2)
 ~~~
 
 

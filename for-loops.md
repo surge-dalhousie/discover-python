@@ -12,7 +12,7 @@
 
 ---
 
-## A `for` loop executes commands once for each value in a collection.
+## A `for` loop executes commands once for each value in a collection
 
 *   Doing calculations on the values in a list one by one
     is as painful as working with `pressure_001`, `pressure_002`, etc.
@@ -79,7 +79,7 @@ for number in [2, 3, 5]:
 
 
 
-## The first line of the `for` loop must end with a colon, and the body must be indented.
+## The first line of the `for` loop must end with a colon, and the body must be indented
 
 *   The colon at the end of the first line signals the start of a *block* of statements.
 *   Python uses indentation rather than `{}` or `begin`/`end` to show *nesting*.
@@ -87,7 +87,7 @@ for number in [2, 3, 5]:
 
 ~~~python
 for number in [2, 3, 5]:
-print(number)
+    print(number)
 ~~~
 
 
@@ -97,7 +97,7 @@ print(number)
 
 ```
 
-*   Indentation is always meaningful in Python.
+### Indentation is always meaningful in Python
 
 ~~~python
 firstName = "Jon"
@@ -111,14 +111,13 @@ firstName = "Jon"
 
 ```
 
-*   This error can be fixed by removing the extra spaces
-    at the beginning of the second line.
+This error can be fixed by removing the extra spaces at the beginning of the second line.
 
 ## Loop variables can be called anything.
 
-*   As with all variables, loop variables are:
-    *   Created on demand.
-    *   Meaningless: their names can be anything at all.
+As with all variables, loop variables are:
+*   Created on demand.
+*   Meaningless: their names can be anything at all.
 
 ~~~python
 for kitten in [2, 3, 5]:
@@ -148,7 +147,7 @@ for p in primes:
 
 ```
 
-## Use `range` to iterate over a sequence of numbers.
+## Use `range` to iterate over a sequence of numbers
 
 *   The built-in function [`range`](https://docs.python.org/3/library/stdtypes.html#range) produces a sequence of numbers.
     *   *Not* a list: the numbers are produced on demand
@@ -169,7 +168,7 @@ for number in range(0, 3):
 
 ```
 
-## The Accumulator pattern turns many values into one.
+## The "accumulator" pattern turns many values into one
 
 *   A common pattern in programs is to:
     1.  Initialize an *accumulator* variable to zero, the empty string, or the empty list.
