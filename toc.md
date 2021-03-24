@@ -10,7 +10,6 @@
 1. [Dictionaries](dictionaries.md)
 1. [For Loops](for-loops.md)
 1. [Conditionals](conditionals.md)
-1. [Libraries](libraries.md)
 1. [pandas DataFrames](pandas-dataframes.md)
 1. [Looping with Data Sets](looping-data-sets.md)
 1. [Plotting](plotting.md)
