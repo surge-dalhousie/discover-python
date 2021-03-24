@@ -211,14 +211,8 @@ print('third character:', element[3])
 
 
 ```python
-element = 'carbon'
-print('zeroth character:', element[0])
-print('third character:', element[3])
+
 ```
-
-    zeroth character: c
-    third character: b
-
 
 ## Difference between strings and lists
 
