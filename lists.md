@@ -26,7 +26,7 @@ life_expcy_1980 = 75.2
 life_expcy_2000 = 79.2
 ```
 
-- While there's nothing wrong with storing the data this way, it requires a lot of variable names. As well, although there is structure in the data (they reflect an ordered sequence of dates), this ordering is not reflected in how the data are stored. 
+- While you can store the data this way, it requires a lot of variable names. As well, although there is structure in the data (they reflect an ordered sequence of dates), this ordering is not reflected in how the data are stored. 
 - We can use a **list** to store many values together
 - Lists are defined by one or more items contained within square brackets `[...]`, with individual values (*list items*) separated by commas `,`:
 
@@ -74,9 +74,24 @@ Note in the above that Python allows us to input a list over multiple lines. Jup
 
 ```
 
+## Indexing is similar for lists and strings
+
+We previously saw how we could get single characters from a character string, using indexes in square brackets:
+
+~~~python
+element = 'carbon'
+print('zeroth character:', element[0])
+print('third character:', element[3])
+~~~
+
+
+```python
+
+```
+
 ## Use an item's index to fetch it from a list
 
-Just like strings
+Indexing works for lists as it does for strings:
 
 ~~~python
 print('zeroth item of life_expcy:', life_expcy[0])
@@ -117,10 +132,10 @@ print(life_expcy)
 ```
 
 ## Methods
-*   `.append()` is a *method* of lists. Methods are like functions, but tied to a particular object.
+*   `.append()` is a *method* of lists. Methods are like functions, but tied to a particular object. In other words, the fact that there is a list.append() method does not mean that we can use `.append()` with other Python objects that aren't lists. 
 *   Use object_name`.method_name()` to call methods.
 *   We will meet other methods of lists as we go along.
-    *   Use `help(list)` for a preview.
+    *   Use `help(list)` for a preview of list methods.
     
 
 ## Extending a list    
@@ -139,7 +154,7 @@ print(life_expcy)
 
 ```
 
-The result is what we call a *nested list*, where the appended list is stored as a single list itme — of type `list` — in the original list. This is a consequence of the fact that lists can contain multiple types.
+The result is what we call a *nested list*, where the appended list is stored as a single list item — of type `list` — in the original list. This is a consequence of the fact that lists can contain multiple types.
 
 In this case, what we want is a *flat list*, a single list of floats. 
 
@@ -161,7 +176,7 @@ print(life_expcy)
 ## Use `del` to remove items from a list entirely
 
 - We use `del list_name[index]` to remove an element from a list (in the example, 9 is not a prime number) and thus shorten it.
-- `del` is not a function or a method, but a *statement* in the language. That is why it is followed by a space, rather than providing arguments in parentheses.
+- `del` is not a function or a method, but a *statement* in Python. That is why it is followed by a space, rather than providing arguments in parentheses.
 - In the example below, we extend one list with another, but then we notice that the last value in the first list, is duplicated as the first value in the second list. So we need to remove one copy of the repeated value. 
 
 
@@ -192,21 +207,6 @@ y = 1
 x.append(y)
 x.append(y + 7)
 print(x)
-~~~
-
-
-```python
-
-```
-
-## Indexing is similar for lists and strings
-
-We previously saw how we could get single characters from a character string, using indexes in square brackets:
-
-~~~python
-element = 'carbon'
-print('zeroth character:', element[0])
-print('third character:', element[3])
 ~~~
 
 
@@ -274,6 +274,12 @@ values = values[____]
 print('second time:', values)
 ~~~
 
+Output: 
+
+`first time: [1, 3, 5]`
+
+`second time: [3, 5]`
+
 
 ```python
 ### BEGIN SOLUTION
@@ -291,15 +297,9 @@ print('second time:', values)
     second time: [3, 5]
 
 
-
-```python
-
-```
-
 ## How Large is a Slice?
 
-If 'low' and 'high' are both non-negative integers,
-how long is the list `values[low:high]`?
+Imagine we have a list like `life_expcy` above. If `a` and `b` are both non-negative integers (e.g., `2` and `5`), how long is the list `life_expcy[a:b]`?
 
 
 ```python
@@ -307,10 +307,9 @@ how long is the list `values[low:high]`?
 ```
 
 ## Solution
-The list `values[low:high]` has `high - low` elements.  For example,
-`values[1:4]` has the 3 elements `values[1]`, `values[2]`, and `values[3]`.
-Note that the expression will only work if `high` is less than the total
-length of the list `values`.
+The list `life_expcy[a:b]` has `b - a` elements.  For example, `values[2:5]` has the 3 elements `life_expcy[2]`, `life_expcy[3]`, and `life_expcy[4]`. 
+
+Note that the expression will only work if `b` is less than the total length of the list `life_expcy`.
 
 ## From Strings to Lists and Back
 
@@ -461,14 +460,14 @@ list `letters` remains unchanged), while `letters.sort()` sorts the list
 ## Copying (or Not)
 
 What do these two programs print?
-In simple terms, explain the difference between `new = old` and `new = old[:]`.
+In simple terms, explain the difference between `x = y` and `x = y[:]`.
 
 ~~~python
 # Program A
-old = list('gold')
-new = old      # simple assignment
-new[0] = 'D'
-print('new is', new, 'and old is', old)
+y = list('gold')
+x = y      # simple assignment
+x[0] = 'D'
+print('x is', x, 'and y is', y)
 ~~~
 
 
@@ -478,10 +477,11 @@ print('new is', new, 'and old is', old)
 
 ~~~python
 # Program B
-old = list('gold')
-new = old[:]   # assigning a slice
-new[0] = 'D'
-print('new is', new, 'and old is', old)
+# Program A
+y = list('gold')
+x = y[:]      # simple assignment
+x[0] = 'D'
+print('x is', x, 'and y is', y)
 ~~~
 
 
@@ -492,21 +492,19 @@ print('new is', new, 'and old is', old)
 ## Solution
 Program A prints
 ~~~
-new is ['D', 'o', 'l', 'd'] and old is ['D', 'o', 'l', 'd']
+x is ['D', 'o', 'l', 'd'] and y is ['D', 'o', 'l', 'd']
 ~~~
 
 Program B prints
 ~~~
-new is ['D', 'o', 'l', 'd'] and old is ['g', 'o', 'l', 'd']
+x is ['D', 'o', 'l', 'd'] and y is ['g', 'o', 'l', 'd']
 ~~~
 
-`new = old` makes `new` a reference to the list `old`; `new` and `old` point
+`x = y` makes `x` a reference to the list `y`; `x` and `y` point
 towards the same object.
 
-`new = old[:]` however creates a new list object `new` containing all elements
-from the list `old`; `new` and `old` are different objects.
-
-
+`x = y[:]` however creates a new list object `x` containing all elements
+from the list `y`; `x` and `y` are different objects.
 
 
 ```python
@@ -545,4 +543,4 @@ what index expression will get the last character in the string `name`?
 ---
 This lesson is adapted from the [Software Carpentry](https://software-carpentry.org/lessons/) [Plotting and Programming in Python](http://swcarpentry.github.io/python-novice-gapminder/) workshop. 
 
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by Aaron J Newman
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by [SURGE](https://github.com/surge-dalhousie)

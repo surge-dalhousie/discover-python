@@ -15,11 +15,18 @@
 *   In Python the `=` symbol **assigns** the value on the right to the name on the left.
 *   The variable is created when a value is assigned to it.
 *   Here, Python assigns an age to a variable `age`
-    and a name in quotes to a variable `first_name`.
+    and a name in quotes to a variable `first_name`. 
 
 ```python
     age = 42
     first_name = 'Ahmed'
+```
+
+Type the above two assignment commands into the cell below and run it.
+
+
+```python
+
 ```
 
 *   Variable names
@@ -28,13 +35,6 @@
     * are **case sensitive** (age, Age and AGE are three different variables)
 *   Variable names that start with underscores like `__aarons_real_age` have a special meaning
     so we won't do that until we understand the convention.
-
-
-
-
-```python
-
-```
 
 ## Use `print` to display values.
 
@@ -48,15 +48,13 @@
 print(first_name, 'is', age, 'years old')
 ```
 
-*   `print` automatically puts a single space between items to separate them.
-*   And wraps around to a new line at the end.
-
-
-
 
 ```python
 
 ```
+
+*   `print` automatically puts a single space between items to separate them.
+*   It also wraps around to a new line at the end.
 
 ## Variables must be created before they are used.
 
@@ -79,8 +77,13 @@ print(last_name)
 
 Be aware that it is the *order of execution* of cells that is important in a Jupyter notebook, not the order in which they appear. Python will remember *all* the code that was run previously, including any variables you have defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then (re)run cells further up, those defined further down will still be present. As an example, create two cells with the following content, in this order:
 
+**First cell:**
 ```python
 print(myval)
+```
+
+**Second cell:**
+```python
 myval = 1
 ```
 
@@ -116,9 +119,14 @@ print('Age in three years:', age)
 ## Python is case-sensitive.
 
 *   Python thinks that upper- and lower-case letters are different,
-    so `Name` and `name` are different variables.
+    so `Name` and `name` are different variables. You can prove this by running `print(Age)` in the cell below.
 *   There are conventions for using upper-case letters at the start of variable names— they should only be used in specific circumstances in Python —  so **it is good practice to only use lower-case letters for variable names**
 
+
+
+```python
+
+```
 
 ## Use meaningful variable names.
 
@@ -208,4 +216,4 @@ variable for temporary storage. This is a fairly common programming idiom.
 ---
 This lesson is adapted from the [Software Carpentry](https://software-carpentry.org/lessons/) [Plotting and Programming in Python](http://swcarpentry.github.io/python-novice-gapminder/) workshop. 
 
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by Aaron J Newman
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by [SURGE](https://github.com/surge-dalhousie)

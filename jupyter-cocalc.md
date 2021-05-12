@@ -17,9 +17,12 @@ You are currently viewing a Jupyter notebook file on CoCalc. Jupyter notebooks a
 
 Cells have two modes: **edit** and **command**. Edit mode is indicated by a green border around the cell, while command mode has a blue border. In edit mode, you can type into the cell and edit it. In command mode, you can run the cell, or manipulate it in certain ways (e.g., deleting a whole cell, or moving it).
 
-You execute (run) cells by selecting them (by clicking once on the cell) and then pressing the Shift & Enter keys on your keyboard simultaneously. Double-clicking a cell will make it editable. 
+This text you are currently reading is a Markdown cell. If you are viewing it in CoCalc, and click once on this text, the cell should become active in command mode, so you should see a blue border around it. If you double-click on this (or any other Markdown) cell, the outline will turn green, the text will change to a *fixed-width* font and you'll see the Markdown formatting tags (like `#` for headings). Try it! Then hit Shift & Enter to execute the cell (which applies and renders the Markdown formatting).
 
-If you double-click on this (or any other Markdown) cell, the text will change to a *fixed-width* font and you'll see the Markdown formatting tags (like `#` for headings). Try it! Then hit Shift & Enter to execute the cell (which applies and renders the Markdown formatting).
+So in summary:
+- Single-clicking a cell will select it in Command mode
+- Double-clicking a cell will put it in Edit mode
+- Pressing the Shift & Enter keys on your keyboard simultaneously will execute a cell. Execution will format a Markdown cell, or run the code in a code cell. 
 
 Below is a code cell with some very simple Python code. You haven't started learning Python yet, but as you can see, at its simplest Python can act like a calculator. Try executing the cell and see what happens.
 
@@ -97,15 +100,13 @@ Although for most of your work you will receive assignments with pre-made files 
 You can have multiple files open at once, and they appear as tabs at the top of the CoCalc window. In general, the tabs/files you have open will stay there even when you close your browser window/tab or log out, so the next time you connect to CoCalc you'll see those tabs still there. **HOWEVER** (and this is important), even if you leave your browser with the CoCalc window/tab open on your computer, CoCalc will "terminate" your running notebook after about 2 hours.
 
 If you have multiple files open, normally they'll just appear as tabs across the top. However, over in the top right section of the window, you'll find these buttons:
-![](images/frames.png)
-
-which allow you to divide the window into multiple "frames" and view multiple files at one time; each pane is itself sub-dividable into more frames!
+![](images/frames.png) which allow you to divide the window into multiple "frames" and view multiple files at one time; each pane is itself sub-dividable into more frames!
 
 **Pro tip:** Notebook files can get really long. CoCalc has a "Contents" button that will show you a table of contents for a notebook file. It makes this automatically from all the Markdown headings it finds. Find the Contents button above and click it to see.
 
-### Running Kernels and Items in Memory
+### Running Kernels, and Items in Memory
 
-This may seem contradictory: how is it that the file is still open, but the notebook is terminated? The answer lies in the fact that when you open a notebook file, you are _also_ starting a new Python **kernel** — a live, running instance of Python that will interpret your Python commands and produce output. Each notebook you open will start a new Python kernel. As long as the kernel is running, the things you do in Python will be stored in memory (RAM). This will make more sense as you start to use Python, but when you're running Python, you generally don't just run commands and get output. You also read in files to memory, and store the results of one command in memory for use in the next command. For example, a bit earlier in this notebook you were instructed to run a cell with the code:
+This may seem contradictory: how is it that the file is still open, but the notebook is terminated? The answer lies in the fact that when you open a notebook file, you are _also_ starting a new Python **kernel** — a live, running instance of Python that will interpret your Python commands and produce output. Each notebook you open will start a new Python kernel. As long as the kernel is running, the things you do in Python will be stored in memory (RAM). This will make more sense as you start to use Python, but when you're running Python, you generally don't just run commands and get output. You also read data files into memory, and store the results of one command in memory for use in the next command. For example, a bit earlier in this notebook you were instructed to run a cell with the code:
 `x = 1`
 
 This *assigned* a value of `1` to a *variable* named `x`. This is now stored in RAM in side this notebooks kernel, so now in the cell below if you type
@@ -128,7 +129,7 @@ You'll see at the top that there is a `Kernel` menu. That has a few options, inc
 
 ### Working in Notebooks
 
-There is an **undo** function, which works similarly to other software you'll have used, sequentially undoing things you've typed in cells. **Importantly**, the undo function does _not_ undo the results of commands you've run in Python. Continuing with our previous example, this means that if you ran the Python command `x = 1`, then ran "undo", Jupyter would delete your typing, `x = 1`, but in the kernel's memory, `x` would still equal `1`. So you could run `print(x)` the output would be `1`.
+There is an **undo** function, which works similarly to other software you'll have used, sequentially undoing things you've typed in cells. **Importantly**, *the undo function does _not_ undo the results of commands you've run in Python*. Continuing with our previous example, this means that if you ran the Python command `x = 1`, then ran "undo", Jupyter would delete your typing, `x = 1`. However, in the kernel's memory, `x` would still equal `1`. So you could run `print(x)` the output would be `1`.
 
 CoCalc also offers [Time Travel](https://doc.cocalc.com/time-travel.html#). This allows you to revert your notebook file to some specific, previous state. It's essentially like hitting "undo" a large (and very specific) number of times, without the risk of carpal tunnel syndrome. 
 
@@ -189,4 +190,4 @@ Note: By default, new cells are code cells. Use the drop-down menu at the top (w
 - Markdown is useful for annotating your code with rich text
 
 ---
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by SURGE
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by [SURGE](https://github.com/surge-dalhousie)

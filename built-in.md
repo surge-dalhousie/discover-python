@@ -116,7 +116,7 @@ round(3.712, 1)
 
 You can fix syntax errors by reading the source and runtime errors by tracing execution
 
-### Python reports a syntax error when it can't understand the source of a program
+### Python reports a *syntax* error when it can't understand the source of a program
 
 Won't even try to run the program if it can't be parsed
 
@@ -169,7 +169,7 @@ age = = 52
 
 ```
 
-### Python reports a runtime error when something goes wrong while a program is executing
+### Python reports a *runtime* error when something goes wrong while a program is executing
 
 ~~~python
 age = 53
@@ -178,8 +178,22 @@ remaining = 100 - aege # mis-spelled 'age'
 
 
 ```python
-
+age = 53
+remaining = 100 - aege # mis-spelled 'age'
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-1-1214fb6c55fc> in <module>
+          1 age = 53
+    ----> 2 remaining = 100 - aege # mis-spelled 'age'
+    
+
+    NameError: name 'aege' is not defined
+
 
 ## Getting Help
 
@@ -198,12 +212,21 @@ help(round)
 
 ### The Jupyter Notebook has two ways to get help
 
-**Option 1:** Place the cursor near where the function is invoked in a cell
-    (i.e., the function name or its parameters),
-    * Hold down `shift`, and press `tab`
-    * Do this several times to expand the information returned
+#### Option 1:
+- Place the cursor near where the function is invoked in a cell (i.e., the function name or its parameters),
+- Hold down `shift`, and press `tab`
+- Do this several times to expand the information returned
 
-**Option 2:** Type the function name in a cell with a question mark after it. Then run the cell
+
+```python
+print('Get help by clicking the print command while in edit mode, and pressing shift-tab')
+```
+
+    Get help by clicking the print command while in edit mode, and pressing shift-tab
+
+
+#### Option 2:
+Type the function name in a cell with a question mark after it. Then run the cell
 
 
 ```python
@@ -270,11 +293,6 @@ print(max(len(rich), len(poor)))
 
 ```
 
-
-```python
-
-```
-
 ## Solution
 
 `max(len(rich), poor)` throws a TypeError. This turns into `max(4, 'tin')` and 
@@ -306,4 +324,4 @@ a runtime error.
 ---
 This lesson is adapted from the [Software Carpentry](https://software-carpentry.org/lessons/) [Plotting and Programming in Python](http://swcarpentry.github.io/python-novice-gapminder/) workshop. 
 
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by Aaron J Newman
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by [SURGE](https://github.com/surge-dalhousie)

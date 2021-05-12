@@ -23,15 +23,15 @@ Bad news first: there are no cute, black-and-white bears here. pandas (whose off
 
 The primary units of pandas data storage you will work with are [DataFrames](https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/01_table_oriented.html#min-tut-01-tableoriented) (essentially, tables of data organized as rows and columns). DataFrames are actually collections of pandas *Series* objects, which can be thought of as individual rows or columns (or vectors, or 1D arrays). 
 
-AMong the things that make pandas so attractive are the powerful interface to access individual records of the table, proper handling of missing values, and relational-databases operations between DataFrames.
+Among the things that make pandas so attractive are the powerful interface to access individual records of the table, proper handling of missing values, and relational-databases operations between DataFrames. As well, pandas functions and methods are written to work intuitively and efficiently with data organized in tables. Most operations are *vectorized*, which means that they will automatically apply to all values in a DataFrame or Series without the need to write `for` loops to execute the same operation on a set of cells.
 
-Pandas is built on top of the [Numpy][numpy] library. Although we haven't discussed NumPy in this workshop, it is a powerful and widely used Python library for working with numerical data. However, it's worth noting for your future reference that most of the methods defined for Numpy Arrays also apply to Pandas Series/DataFrames.
+pandas is built on top of the [NumPy](https://numpy.org) library. Although we haven't discussed NumPy in this workshop, it is a powerful and widely used Python library for working with numerical data. However, it's worth noting for your future reference that most of the methods defined for NumPy Arrays also apply to Pandas Series/DataFrames.
 
 ## About Python Libraries
 
 pandas is an example of a Python library. A **library** is a collection of files (called *modules*) that contains functions for use by other programs. Libraries provide ways of extending Python's functionality in different ways. They may also contain data values (e.g., numerical constants), entire sample data sets, and other things. A library's contents are supposed to be related, although there's no actual way to enforce that.
 
-The Python [standard library][stdlib] is an extensive suite of modules that comes with Python itself. Many additional libraries are available; CoCalc has a large number of extra libraries already installed.
+The Python [standard library](https://docs.python.org/3/library/) is an extensive suite of modules that comes with Python itself. Everything we've done so far in this workshop has been part of the standard library. Many additional libraries are available; CoCalc has a large number of extra libraries already installed.
 
 To use a library (once it's installed), we must import it using the `import` declaration, like this:
 
@@ -81,7 +81,7 @@ df = pd.read_csv('data/gapminder_gdp_europe.csv')
 
 We can view the contents of the DataFrame by simply typing its name and running the cell. Note that, unlike most of the examples we've used in previous lessons, we *don't* use the `print()` function. Although it works, the result is not nicely formatted the way the output is if we just use the name of the data frame.
 
-That is, raun this command: `df`, not `print(df)` in the cell below.
+That is, run this command: `df` — not `print(df)` — in the cell below.
 
 
 ```python
@@ -137,10 +137,6 @@ Now that we have defined the index, we can access the 1952 GDP value for Austria
 ~~~python
 df.loc['Austria', 'gdpPercap_1952']
 ~~~
-
-
-
-
 
 
 ```python
@@ -317,17 +313,12 @@ pandas allows an easy way to identify values in a DataFrame that meet a certain 
 
 ~~~python
 countries = ['France', 'Germany', 'Italy', 'Spain', 'United Kingdom']
-df.loc[countries, ['gdpPercap_1962', 'gdpPercap_1992']] 10000
+df.loc[countries, ['gdpPercap_1962', 'gdpPercap_1992']] > 10000
 ~~~
 
 
 ```python
 
-```
-
-
-```python
-scand_data 30000
 ```
 
 ## Select values or NaN using a Boolean mask.
@@ -338,7 +329,7 @@ We create a mask by assigning the output of a conditional statement to a variabl
 
 
 ~~~python
-mask = scand_data 30000
+mask = scand_data > 30000
 ~~~
 
 
@@ -701,4 +692,4 @@ Poland's borders have been stable since 1945, but changed several times in the y
 ---
 This lesson is adapted from the [Software Carpentry](https://software-carpentry.org/lessons/) [Plotting and Programming in Python](http://swcarpentry.github.io/python-novice-gapminder/) workshop. 
 
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by Aaron J Newman
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by [SURGE](https://github.com/surge-dalhousie)

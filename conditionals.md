@@ -188,6 +188,11 @@ print('final velocity:', velocity)
     to show the final value of `velocity`,
     since its value is updated by the last iteration of the loop.
 
+
+```python
+
+```
+
 ## Compound Relations Using `and`, `or`, and Parentheses
 
 Often, you want some combination of things to be true.  You can combine
@@ -274,11 +279,6 @@ print(result)
 
 
 ```python
-
-```
-
-
-```python
 ### BEGIN SOLUTION 
 original = [-1.5, 0.2, 0.4, 0.0, -1.3, 0.4]
 result = []
@@ -290,9 +290,6 @@ for value in original:
 print(result)
 ### END SOLUTION 
 ```
-
-    [0, 1, 1, 1, 0, 1]
-
 
 ## Initializing
 
@@ -315,11 +312,6 @@ What are the advantages and disadvantages of using this method to find the range
 
 
 ```python
-
-```
-
-
-```python
 ### BEGIN SOLUTION 
 
 values = [-2, 1, 65, 78, -54, -24, 100]
@@ -337,41 +329,6 @@ print(smallest, largest)
 ### END SOLUTION 
 ```
 
-    -54 100
-
-
-## Using Functions With Conditionals in Pandas
-
-Functions will often contain conditionals.  Here is a short example that
-will indicate which quartile the argument is in based on hand-coded values
-for the quartile cut points.
-
-~~~python
-def calculate_life_quartile(exp):
-    if exp < 58.41:
-        # This observation is in the first quartile
-        return 1
-    elif exp >= 58.41 and exp < 67.05:
-        # This observation is in the second quartile
-        return 2
-    elif exp >= 67.05 and exp < 71.70:
-        # This observation is in the third quartile
-        return 3
-    elif exp >= 71.70:
-        # This observation is in the fourth quartile
-        return 4
-    else:
-        # This observation has bad data
-        return None
-
-calculate_life_quartile(62.5)
-~~~
-
-
-```python
-
-```
-
 ## Summary of Key Points:
 - Use `if` statements to control whether or not a block of code is executed.
 - Conditionals are often used inside loops.
@@ -382,4 +339,4 @@ calculate_life_quartile(62.5)
 ---
 This lesson is adapted from the [Software Carpentry](https://software-carpentry.org/lessons/) [Plotting and Programming in Python](http://swcarpentry.github.io/python-novice-gapminder/) workshop. 
 
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by Aaron J Newman
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by [SURGE](https://github.com/surge-dalhousie)

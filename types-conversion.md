@@ -102,8 +102,8 @@ print(full_name)
 Multiplying a character string by an integer _N_ creates a new string that consists of that character string repeated  _N_ times. (Since multiplication is repeated addition)
 
 ~~~python
-separator = '=' * 10
-print(separator)
+greeting = 'hello-' * 3
+print(greeting)
 ~~~
 
 
@@ -357,11 +357,13 @@ The answers to the questions are:
 
 ## Division Types
 
-In Python 3, the `//` operator performs integer (whole-number) floor division, the `/` operator performs floating-point
-division, and the '%' (or *modulo*) operator calculates and returns the remainder from integer division:
+In Python 3:
+- the `//` operator performs integer (whole-number) floor division
+- the `/` operator performs floating-point division
+- the '%' (or *modulo*) operator calculates and returns the remainder from integer division:
 
 ~~~python
-print('5 // 3:', 5//3)
+print('5 // 3 = ', 5//3)
 ~~~
 
 
@@ -370,7 +372,7 @@ print('5 // 3:', 5//3)
 ```
 
 ~~~python
-print('5 / 3:', 5/3)
+print('5 / 3 = ', 5/3)
 ~~~
 
 
@@ -379,7 +381,7 @@ print('5 / 3:', 5/3)
 ```
 
 ~~~python
-print('5 % 3:', 5%3)
+print('5 % 3 =', 5%3)
 ~~~
 
 
@@ -389,37 +391,79 @@ print('5 % 3:', 5%3)
 
 ## Division Challenge
 
-If `num_subjects` is the number of subjects taking part in a study, and `num_per_survey` is the number that can take part in a single survey, write an expression that calculates the number of surveys needed to reach everyone once, and assign the result to `num_surveys`:
+Imagine we are catering an event for 100 guests, and for dessert we want to serve each person one slice of pie. Each pie yields 8 pieces. How do we calculate the number of pies we need? 
+
+We can start by simply dividing the number of guests by the number of slices per pie:
+
+```python
+pie_eaters = 100
+slice_per_pie = 8
+num_pies = pie_eaters / slice_per_pie
+print(pie_eaters, 'guests', 'requires', num_pies, 'pies')
+```
 
 
 ```python
-num_subjects = 600
-num_per_survey = 42
 
-### BEGIN SOLUTION
-num_surveys = (num_subjects - 1) // num_per_survey + 1
-### END SOLUTION
-
-print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
 ```
 
-    600 subjects, 42 per survey: 15
+However, this yields a floating point number. We can't easily bake half a pie, so we need to round up to ensure we have enough pies. We can use floor division for this:
+
+```python
+num_pies = pie_eaters // slice_per_pie
+print(pie_eaters, 'guests', 'requires', num_pies, 'pies')
+```
 
 
-## Solution
-We want the minimum number of surveys that reaches everyone once, which is
-the rounded up value of `num_subjects/ num_per_survey`. This is 
-equivalent to performing a floor division with `//` and adding 1. Before
-the division we need to subtract 1 from the number of subjects to deal with 
-the case where `num_subjects` is evenly divisible by `num_per_survey`.
-~~~python
-num_subjects = 600
-num_per_survey = 42
-num_surveys = (num_subjects - 1) // num_per_survey + 1
+```python
 
-print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
-~~~
+```
 
+Of course, we actually need one more pie than that, but Python doesn't provide an operator for rounding up ("ceiling" division). So we can simply add 1 to our answer:
+
+```python
+num_pies = pie_eaters // slice_per_pie + 1
+print(pie_eaters, 'guests', 'requires', num_pies, 'pies')
+```
+
+Note that Python uses standard order of operations, so the division will be performed before the addition. That is, we will get:
+
+`(pie_eaters // slice_per_pie) + 1`
+
+not
+
+`pie_eaters // (slice_per_pie + 1)`
+
+
+
+```python
+
+```
+
+When writing code, it's good to test it and think about possible cases where it won't work as intended. In this example, if the number of guests was evenly divisible by 8, then our calculation would erroneously tell us we need one more pie than we do:
+
+```python
+pie_eaters = 64
+num_pies = pie_eaters // slice_per_pie + 1
+print(pie_eaters, 'guests', 'requires', num_pies, 'pies')
+```
+
+
+```python
+
+```
+
+We can make our code more robust by subtracting 1 to `pie_eaters` within the formula:
+
+```python
+num_pies = (pie_eaters - 1) // slice_per_pie + 1
+print(pie_eaters, 'guests', 'requires', num_pies, 'pies')
+```
+
+
+```python
+
+```
 
 ## Strings to Numbers
 
@@ -505,45 +549,6 @@ Note: there may be more than one right answer.
 
 ```
 
-## Complex Numbers
-
- Complex numbers are common in physics and other fields, and are composed of a "real" part and an "imaginary" part. Python provides complex numbers, which are written as `1.0 + 2.0j`, with the real part before the `+` and the imaginary part after the plus, with the suffix `j`.
- 
-If `val` is a complex number, its real and imaginary parts can be accessed using *dot notation* as `val.real` and `val.imag`.
-
-~~~python
-complex = 6 + 2j
-print(complex.real)
-print(complex.imag)
-~~~
-
-
-```python
-
-```
-
-### Thought questions
-
-(If you're new to imaginary numbers, you can skip this one!)
-
-1.  Why do you think Python uses `j` instead of `i` for the imaginary part?
-2.  What do you expect `1+2j + 3` to produce?
-3.  What do you expect `4j` to be?  What about `4 j` or `4 + j`?
-
-
-```python
-
-```
-
-## Solution
-
-1. Standard mathematics treatments typically use `i` to denote an imaginary number. However, from media reports it
-was an early convention established from electrical engineering that now presents a technically expensive area to
-change. [Stack Overflow provides additional explanation and
-discussion.](http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
-2. `(4+2j)`
-3. `4j`, `Syntax Error: invalid syntax`, in this case _j_ is considered a variable and this depends on if _j_ is defined and if so, its assigned value
-
 ---
 ## Summary of Key Points:
 - Every value has a type
@@ -560,4 +565,4 @@ discussion.](http://stackoverflow.com/questions/24812444/why-are-complex-numbers
 ---
 This lesson is adapted from the [Software Carpentry](https://software-carpentry.org/lessons/) [Plotting and Programming in Python](http://swcarpentry.github.io/python-novice-gapminder/) workshop. 
 
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by SURGE
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 2021 by [SURGE](https://github.com/surge-dalhousie)
