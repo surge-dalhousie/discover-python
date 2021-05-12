@@ -11,7 +11,6 @@
 1. [For Loops](for-loops.md)
 1. [Conditionals](conditionals.md)
 1. [pandas DataFrames](pandas-dataframes.md)
-1. [Looping with Data Sets](looping-data-sets.md)
 1. [Plotting](plotting.md)
 1. [Writing Functions](writing-functions.md)
 1. [Programming Style](programming-style.md)
