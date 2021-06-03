@@ -5,5 +5,3 @@ Welcome to the [SURGE](https://surgeinnovation.ca) Discover Python workshop! Thi
 [Click here to jump to the Discover Python workshop table of contents](https://surge-dalhousie.github.io/discover-python/toc)
 
 Discover Python is part of the SURGE [Discover Coding](https://surge-dalhousie.github.io/discover-coding/) workshop series.
-
-Here is a sample change.
