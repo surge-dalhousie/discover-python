@@ -1,10 +1,10 @@
 # Table of Contents
 
 ## Session 1
-1. [Introduction](session_1/introduction)
-1. [Tools of the Trade for Data Science](session_1/tools)
-1. [Introduction to Jupyter and CoCalc](session_1/jupyter-cocalc)
-1. [Variables and Assignment](session_1/variables-and-assignment)
+1. [Introduction](session_1/01_introduction)
+1. [Tools of the Trade for Data Science](session_1/02_tools)
+1. [Introduction to Jupyter and CoCalc](session_1/03_jupyter-cocalc)
+1. [Variables and Assignment](session_1/04_variables-and-assignment)
 
 ## Session 2
 1. [Data Types and Conversion](session_2/types-conversion)
